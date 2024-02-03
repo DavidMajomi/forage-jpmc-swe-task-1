@@ -39,5 +39,8 @@ class ClientTest(unittest.TestCase):
   def test_getRatio_priceAEqualsPriceB(self):
     self.assertEquals(getRatio(10, 10), 1)
 
+  def test_getRatio_priceBEqualsZero(self):
+    self.assertEquals(getRatio(10, 0), None)
+    
 if __name__ == '__main__':
     unittest.main()
